@@ -1,0 +1,26 @@
+$colorHeaderBack: #222235;
+$colorH2: #fff;
+@mixin flexHeaderFirstWrap {
+  display: flex;
+  gap: 4vw;
+  align-items: center;
+}
+@mixin flexHeader {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  justify-content: space-evenly;
+}
+.HeaderBox {
+  padding: 4vw;
+  background: $colorHeaderBack;
+  @include flexHeader();
+  &__wrapHeader {
+    @include flexHeaderFirstWrap();
+  }
+}
+.HeaderBox {
+  &__link {
+    color: #fff;
+  }
+}
